@@ -1,0 +1,34 @@
+{
+    "presets": [
+      "@babel/env",
+      "@babel/preset-react",
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ],
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ],
+      [
+        "module-resolver",
+        {
+          "root": [
+            "."
+          ],
+          "extensions": [
+            ".jsx",
+            ".js",
+            ".json"
+          ],
+          "alias": {
+            "~": "./src",
+            "~shared": "./src/app/shared"
+          }
+        }
+      ]
+    ]
+  }
